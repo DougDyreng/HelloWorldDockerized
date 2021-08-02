@@ -1,0 +1,20 @@
+server {
+    listen 3200 default_server;
+    listen [::]:3200 default_server;
+    # server_name example.com;
+    # server_name ~^(.+)$;
+    server_name _;
+
+    root /var/www/example.com/html;
+    index index.html;
+    error_page 404 /404.html;
+
+    location / {
+        return 404;
+    }
+
+    location = /404.html {
+        internal;
+    }
+  
+  }

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker ps | awk '{if(NR>1)print}'| awk '{ print $1}' | xargs docker stop
+

@@ -1,7 +1,0 @@
-#!/bin/bash
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-javac -version
-javac HelloWorld.java -verbose
-docker build ./ --tag hello-world
-docker tag hello-world ddyreng/demo:accela
-docker push ddyreng/demo:accela

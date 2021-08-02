@@ -1,0 +1,12 @@
+#!/bin/bash
+
+docker ps | awk '{if(NR>1)print}'| awk '{ print $1}' | xargs docker stop
+docker ps -a | awk '{if(NR>1)print}'| awk '{ print $1}' | xargs docker rm
+docker build -t atdd8 .;docker run -p3200:3200 -d atdd8;sleep 1;docker ps
+
+open http://www.example.com:3200
+open http://example.com:3200
+open http://www.example.com:3200/bob
+open http://localhost:3400
+open http://www.doofus.com:3200
+

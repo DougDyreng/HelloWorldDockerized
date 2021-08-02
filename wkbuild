@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# docker build -t atdd7 .;docker run -h www.example.com -p3200:3200 -p3400:3400 -d atdd7;sleep 1;docker ps
+# docker build -t atdd7 .;docker run -p3200:3200 -p3400:3400 -d atdd7;sleep 1;docker ps
+docker build -t atdd8 .;docker run -p3200:3200 -d atdd8;sleep 1;docker ps
+
